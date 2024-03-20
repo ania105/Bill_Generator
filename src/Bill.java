@@ -9,6 +9,9 @@ import javax.swing.JLabel;
 import java.awt.Color;
 import javax.swing.JTabbedPane;
 import javax.swing.JSeparator;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Bill {
 
@@ -83,53 +86,55 @@ public class Bill {
 		separator.setBounds(62, 78, 301, 2);
 		panel_9.add(separator);
 		
-		JLabel lblNewLabel_3 = new JLabel("MOCKTAILS");
-		lblNewLabel_3.setFont(new Font("Bookman Old Style", Font.PLAIN, 19));
-		lblNewLabel_3.setBounds(154, 123, 135, 33);
-		panel_9.add(lblNewLabel_3);
+		JButton btnNewButton = new JButton("MOCKTAIL");
+		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 18));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tabbedPane.setSelectedIndex(1);
+			}
+		});
+		btnNewButton.setBounds(116, 114, 195, 46);
+		panel_9.add(btnNewButton);
 		
-		JLabel lblNewLabel_3_1 = new JLabel("STARTERS");
-		lblNewLabel_3_1.setFont(new Font("Bookman Old Style", Font.PLAIN, 19));
-		lblNewLabel_3_1.setBounds(154, 188, 135, 33);
-		panel_9.add(lblNewLabel_3_1);
+		JButton btnStarters = new JButton("STARTERS");
+		btnStarters.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tabbedPane.setSelectedIndex(2);
+			}
+		});
+		btnStarters.setFont(new Font("Arial", Font.PLAIN, 18));
+		btnStarters.setBounds(116, 193, 195, 46);
+		panel_9.add(btnStarters);
 		
-		JLabel lblNewLabel_3_2 = new JLabel("MAIN COURSE");
-		lblNewLabel_3_2.setFont(new Font("Bookman Old Style", Font.PLAIN, 19));
-		lblNewLabel_3_2.setBounds(138, 252, 150, 33);
-		panel_9.add(lblNewLabel_3_2);
+		JButton btnMainCourse = new JButton("MAIN COURSE");
+		btnMainCourse.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tabbedPane.setSelectedIndex(3);
+			}
+		});
+		btnMainCourse.setFont(new Font("Arial", Font.PLAIN, 18));
+		btnMainCourse.setBounds(116, 268, 195, 46);
+		panel_9.add(btnMainCourse);
 		
-		JLabel lblNewLabel_3_4 = new JLabel("DESSERT");
-		lblNewLabel_3_4.setFont(new Font("Bookman Old Style", Font.PLAIN, 19));
-		lblNewLabel_3_4.setBounds(170, 315, 103, 33);
-		panel_9.add(lblNewLabel_3_4);
+		JButton btnDessert = new JButton("DESSERT");
+		btnDessert.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tabbedPane.setSelectedIndex(4);
+			}
+		});
+		btnDessert.setFont(new Font("Arial", Font.PLAIN, 18));
+		btnDessert.setBounds(116, 353, 195, 46);
+		panel_9.add(btnDessert);
 		
-		JLabel lblNewLabel_3_4_1 = new JLabel("BEVERAGES");
-		lblNewLabel_3_4_1.setFont(new Font("Bookman Old Style", Font.PLAIN, 19));
-		lblNewLabel_3_4_1.setBounds(160, 389, 129, 33);
-		panel_9.add(lblNewLabel_3_4_1);
-		
-	
-		
-		JPanel panel_10 = new JPanel();
-		tabbedPane.addTab("Starters", null, panel_10, null);
-		panel_10.setLayout(null);
-		
-		JPanel panel_11 = new JPanel();
-		tabbedPane.addTab("Main Course", null, panel_11, null);
-		panel_11.setLayout(null);
-		
-		JPanel panel_7 = new JPanel();
-		tabbedPane.addTab("Dessert", null, panel_7, null);
-		panel_7.setLayout(null);
-		
-		JLabel lblNewLabel_1 = new JLabel("D E S S E R T S");
-		lblNewLabel_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
-		lblNewLabel_1.setBounds(150, 36, 154, 25);
-		panel_7.add(lblNewLabel_1);
-		
-		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(92, 84, 252, 2);
-		panel_7.add(separator_1);
+		JButton btnBeverages = new JButton("BEVERAGES");
+		btnBeverages.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tabbedPane.setSelectedIndex(5);
+			}
+		});
+		btnBeverages.setFont(new Font("Arial", Font.PLAIN, 18));
+		btnBeverages.setBounds(116, 435, 195, 46);
+		panel_9.add(btnBeverages);
 		
 		JPanel panel_6 = new JPanel();
 		tabbedPane.addTab("Mocktails", null, panel_6, null);
@@ -144,8 +149,59 @@ public class Bill {
 		separator_1_1.setBounds(94, 85, 264, 14);
 		panel_6.add(separator_1_1);
 		
+	
+		
+		JPanel panel_10 = new JPanel();
+		tabbedPane.addTab("Starters", null, panel_10, null);
+		panel_10.setLayout(null);
+		
+		JLabel lblNewLabel_1_1_1 = new JLabel("S T A R T E R S");
+		lblNewLabel_1_1_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
+		lblNewLabel_1_1_1.setBounds(136, 55, 194, 25);
+		panel_10.add(lblNewLabel_1_1_1);
+		
+		JSeparator separator_2 = new JSeparator();
+		separator_2.setBounds(81, 90, 280, 39);
+		panel_10.add(separator_2);
+		
+		JPanel panel_11 = new JPanel();
+		tabbedPane.addTab("Main Course", null, panel_11, null);
+		panel_11.setLayout(null);
+		
+		JLabel lblNewLabel_1_1_1_1 = new JLabel("M A I N  C O U R S E");
+		lblNewLabel_1_1_1_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
+		lblNewLabel_1_1_1_1.setBounds(129, 56, 194, 25);
+		panel_11.add(lblNewLabel_1_1_1_1);
+		
+		JSeparator separator_3 = new JSeparator();
+		separator_3.setBounds(89, 91, 275, 25);
+		panel_11.add(separator_3);
+		
+		JPanel panel_7 = new JPanel();
+		tabbedPane.addTab("Dessert", null, panel_7, null);
+		panel_7.setLayout(null);
+		
+		JLabel lblNewLabel_1 = new JLabel("D E S S E R T S");
+		lblNewLabel_1.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
+		lblNewLabel_1.setBounds(150, 36, 154, 25);
+		panel_7.add(lblNewLabel_1);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setBounds(92, 84, 252, 2);
+		panel_7.add(separator_1);
+		
 		JPanel panel_5 = new JPanel();
 		tabbedPane.addTab("Beverages", null, panel_5, null);
+		panel_5.setLayout(null);
+		
+		JLabel lblNewLabel_1_2 = new JLabel("B E V E R A G E S");
+		lblNewLabel_1_2.setFont(new Font("Baskerville Old Face", Font.PLAIN, 20));
+		lblNewLabel_1_2.setBounds(133, 47, 177, 25);
+		panel_5.add(lblNewLabel_1_2);
+		
+		JSeparator separator_4 = new JSeparator();
+		separator_4.setBounds(91, 82, 235, 19);
+		panel_5.add(separator_4);
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(534, 106, 423, 445);
