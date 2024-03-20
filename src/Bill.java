@@ -12,6 +12,8 @@ import javax.swing.JSeparator;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
 
 public class Bill {
 
@@ -149,6 +151,50 @@ public class Bill {
 		separator_1_1.setBounds(94, 85, 264, 14);
 		panel_6.add(separator_1_1);
 		
+		JLabel lblNewLabel_3 = new JLabel("Blue Moon");
+		lblNewLabel_3.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3.setBounds(63, 147, 126, 36);
+		panel_6.add(lblNewLabel_3);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox.setBounds(289, 157, 133, 25);
+		panel_6.add(comboBox);
+		
+		JLabel lblNewLabel_3_1 = new JLabel("Chilli Guava");
+		lblNewLabel_3_1.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_1.setBounds(63, 231, 126, 36);
+		panel_6.add(lblNewLabel_3_1);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox_1.setBounds(289, 241, 133, 25);
+		panel_6.add(comboBox_1);
+		
+		JLabel lblNewLabel_3_1_1 = new JLabel("Mint Mojito");
+		lblNewLabel_3_1_1.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_1_1.setBounds(63, 316, 126, 36);
+		panel_6.add(lblNewLabel_3_1_1);
+		
+		JLabel lblNewLabel_3_1_2 = new JLabel("Masala Lemonade");
+		lblNewLabel_3_1_2.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_1_2.setBounds(63, 410, 175, 36);
+		panel_6.add(lblNewLabel_3_1_2);
+		
+		JComboBox comboBox_1_1 = new JComboBox();
+		comboBox_1_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox_1_1.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox_1_1.setBounds(289, 328, 133, 25);
+		panel_6.add(comboBox_1_1);
+		
+		JComboBox comboBox_1_2 = new JComboBox();
+		comboBox_1_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox_1_2.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox_1_2.setBounds(289, 422, 133, 25);
+		panel_6.add(comboBox_1_2);
+		
 	
 		
 		JPanel panel_10 = new JPanel();
@@ -163,6 +209,72 @@ public class Bill {
 		JSeparator separator_2 = new JSeparator();
 		separator_2.setBounds(81, 90, 280, 39);
 		panel_10.add(separator_2);
+		
+		JLabel lblNewLabel_3_2 = new JLabel("Tandoori Platter");
+		lblNewLabel_3_2.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_2.setBounds(49, 139, 158, 36);
+		panel_10.add(lblNewLabel_3_2);
+		
+		JLabel lblNewLabel_3_3 = new JLabel("Harabhara Kebab");
+		lblNewLabel_3_3.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_3.setBounds(50, 205, 175, 36);
+		panel_10.add(lblNewLabel_3_3);
+		
+		JLabel lblNewLabel_3_4 = new JLabel("Manchurian Dry");
+		lblNewLabel_3_4.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_4.setBounds(50, 280, 175, 36);
+		panel_10.add(lblNewLabel_3_4);
+		
+		JLabel lblNewLabel_3_5 = new JLabel("Mexican Volcano");
+		lblNewLabel_3_5.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_5.setBounds(49, 359, 181, 36);
+		panel_10.add(lblNewLabel_3_5);
+		
+		JLabel lblNewLabel_3_6 = new JLabel("French Fries");
+		lblNewLabel_3_6.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_6.setBounds(49, 435, 163, 36);
+		panel_10.add(lblNewLabel_3_6);
+		
+		JLabel lblNewLabel_3_7 = new JLabel("Simply Nachos");
+		lblNewLabel_3_7.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_7.setBounds(49, 508, 163, 36);
+		panel_10.add(lblNewLabel_3_7);
+		
+		JComboBox comboBox_2 = new JComboBox();
+		comboBox_2.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox_2.setBounds(293, 151, 133, 25);
+		panel_10.add(comboBox_2);
+		
+		JComboBox comboBox_2_1 = new JComboBox();
+		comboBox_2_1.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox_2_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox_2_1.setBounds(293, 217, 133, 25);
+		panel_10.add(comboBox_2_1);
+		
+		JComboBox comboBox_2_2 = new JComboBox();
+		comboBox_2_2.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox_2_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox_2_2.setBounds(293, 292, 133, 25);
+		panel_10.add(comboBox_2_2);
+		
+		JComboBox comboBox_2_3 = new JComboBox();
+		comboBox_2_3.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox_2_3.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox_2_3.setBounds(293, 371, 133, 25);
+		panel_10.add(comboBox_2_3);
+		
+		JComboBox comboBox_2_4 = new JComboBox();
+		comboBox_2_4.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox_2_4.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox_2_4.setBounds(293, 447, 133, 25);
+		panel_10.add(comboBox_2_4);
+		
+		JComboBox comboBox_2_5 = new JComboBox();
+		comboBox_2_5.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
+		comboBox_2_5.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		comboBox_2_5.setBounds(293, 520, 133, 25);
+		panel_10.add(comboBox_2_5);
 		
 		JPanel panel_11 = new JPanel();
 		tabbedPane.addTab("Main Course", null, panel_11, null);
@@ -204,7 +316,7 @@ public class Bill {
 		panel_5.add(separator_4);
 		
 		JPanel panel_2 = new JPanel();
-		panel_2.setBounds(534, 106, 423, 445);
+		panel_2.setBounds(534, 103, 445, 448);
 		panel.add(panel_2);
 		
 		JPanel panel_3 = new JPanel();
