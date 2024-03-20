@@ -14,10 +14,20 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JScrollPane;
+import java.awt.event.InputMethodListener;
+import java.awt.event.InputMethodEvent;
+import javax.swing.UIManager;
 
-public class Bill {
+public class Bill extends JFrame {
 
-	private JFrame frame;
+	public JFrame frame;
+	public JTable table;
+	
+	
+	
 
 	/**
 	 * Launch the application.
@@ -45,6 +55,9 @@ public class Bill {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	
+	
+	
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(0, 0, 1550, 800);
@@ -52,7 +65,7 @@ public class Bill {
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(51, 153, 255));
+		panel.setBackground(new Color(102, 51, 0));
 		panel.setBounds(10, -10, 1536, 763);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
@@ -73,6 +86,7 @@ public class Bill {
 		tabbedPane.setBounds(0, 10, 454, 620);
 		panel_1.add(tabbedPane);
 		
+		
 
 		
 		JPanel panel_9 = new JPanel();
@@ -89,6 +103,8 @@ public class Bill {
 		panel_9.add(separator);
 		
 		JButton btnNewButton = new JButton("MOCKTAIL");
+		btnNewButton.setForeground(new Color(0, 0, 0));
+		btnNewButton.setBackground(UIManager.getColor("Button.background"));
 		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 18));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -150,22 +166,41 @@ public class Bill {
 		JSeparator separator_1_1 = new JSeparator();
 		separator_1_1.setBounds(94, 85, 264, 14);
 		panel_6.add(separator_1_1);
+		//
 		
-		JLabel lblNewLabel_3 = new JLabel("Blue Moon");
-		lblNewLabel_3.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
-		lblNewLabel_3.setBounds(63, 147, 126, 36);
-		panel_6.add(lblNewLabel_3);
-		
+		 
 		JComboBox comboBox = new JComboBox();
 		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
 		comboBox.setBounds(289, 157, 133, 25);
 		panel_6.add(comboBox);
 		
-		JLabel lblNewLabel_3_1 = new JLabel("Chilli Guava");
-		lblNewLabel_3_1.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
-		lblNewLabel_3_1.setBounds(63, 231, 126, 36);
-		panel_6.add(lblNewLabel_3_1);
+		//
+		
+		JButton lblNewLabel_3 = new JButton("Blue Moon");
+		lblNewLabel_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String Item = "Blue Moon";
+				Double Price = 210.00;
+				String Qty = (String) comboBox.getSelectedItem();
+				
+				Double tqty = Double.valueOf(Qty);
+				Double tot_prc = Price * tqty;
+				
+				
+				DefaultTableModel model = (DefaultTableModel) table.getModel();
+				model.addRow(new Object[] {Item , Qty, tot_prc} );
+				
+				
+			
+			}});
+		
+	
+		
+		lblNewLabel_3.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3.setBounds(27, 147, 207, 36);
+		panel_6.add(lblNewLabel_3);
+		
 		
 		JComboBox comboBox_1 = new JComboBox();
 		comboBox_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -173,15 +208,24 @@ public class Bill {
 		comboBox_1.setBounds(289, 241, 133, 25);
 		panel_6.add(comboBox_1);
 		
-		JLabel lblNewLabel_3_1_1 = new JLabel("Mint Mojito");
-		lblNewLabel_3_1_1.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
-		lblNewLabel_3_1_1.setBounds(63, 316, 126, 36);
-		panel_6.add(lblNewLabel_3_1_1);
-		
-		JLabel lblNewLabel_3_1_2 = new JLabel("Masala Lemonade");
-		lblNewLabel_3_1_2.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
-		lblNewLabel_3_1_2.setBounds(63, 410, 175, 36);
-		panel_6.add(lblNewLabel_3_1_2);
+		JButton lblNewLabel_3_1 = new JButton("Chilli Guava");
+		lblNewLabel_3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String Item = "Chilli Guava";
+				Double Price = 210.00;
+				String Qty = (String) comboBox_1.getSelectedItem();
+				
+				Double tqty = Double.valueOf(Qty);
+				Double tot_prc = Price * tqty;
+				
+				
+				DefaultTableModel model = (DefaultTableModel) table.getModel();
+				model.addRow(new Object[] {Item , Qty, tot_prc} );
+			}
+		});
+		lblNewLabel_3_1.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_1.setBounds(27, 231, 207, 36);
+		panel_6.add(lblNewLabel_3_1);
 		
 		JComboBox comboBox_1_1 = new JComboBox();
 		comboBox_1_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -189,13 +233,55 @@ public class Bill {
 		comboBox_1_1.setBounds(289, 328, 133, 25);
 		panel_6.add(comboBox_1_1);
 		
+		JButton lblNewLabel_3_1_1 = new JButton("Mint Mojito");
+		lblNewLabel_3_1_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String Item = "Mint Mojito";
+				Double Price = 210.00;
+				String Qty = (String) comboBox_1_1.getSelectedItem();
+				
+				Double tqty = Double.valueOf(Qty);
+				Double tot_prc = Price * tqty;
+				
+				
+				DefaultTableModel model = (DefaultTableModel) table.getModel();
+				model.addRow(new Object[] {Item , Qty, tot_prc} );
+			}
+		});
+		lblNewLabel_3_1_1.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_1_1.setBounds(27, 319, 207, 36);
+		panel_6.add(lblNewLabel_3_1_1);
+		
 		JComboBox comboBox_1_2 = new JComboBox();
 		comboBox_1_2.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		comboBox_1_2.setModel(new DefaultComboBoxModel(new String[] {"", "1", "2", "3", "4", "5", "6", "7", "8"}));
 		comboBox_1_2.setBounds(289, 422, 133, 25);
 		panel_6.add(comboBox_1_2);
 		
+		JButton lblNewLabel_3_1_2 = new JButton("Chivalry");
+		lblNewLabel_3_1_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String Item = "Chivalry";
+				Double Price = 275.00;
+				String Qty = (String) comboBox_1_2.getSelectedItem();
+				
+				Double tqty = Double.valueOf(Qty);
+				Double tot_prc = Price * tqty;
+				
+				
+				DefaultTableModel model = (DefaultTableModel) table.getModel();
+				model.addRow(new Object[] {Item , Qty, tot_prc} );
+			}
+		});
+		lblNewLabel_3_1_2.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
+		lblNewLabel_3_1_2.setBounds(27, 408, 207, 47);
+		panel_6.add(lblNewLabel_3_1_2);
+		
 	
+		
+		
+		
+		
 		
 		JPanel panel_10 = new JPanel();
 		tabbedPane.addTab("Starters", null, panel_10, null);
@@ -318,6 +404,25 @@ public class Bill {
 		JPanel panel_2 = new JPanel();
 		panel_2.setBounds(534, 103, 445, 448);
 		panel.add(panel_2);
+		panel_2.setLayout(null);
+		
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 10, 425, 428);
+		panel_2.add(scrollPane);
+		
+		table = new JTable();
+		scrollPane.setViewportView(table);
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+			},
+			new String[] {
+				"Item", "Qty", "Price"
+			}
+		));
+		 
+		
+        
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBounds(1042, 103, 465, 626);
@@ -334,5 +439,6 @@ public class Bill {
 		JPanel panel_4 = new JPanel();
 		panel_4.setBounds(488, 574, 527, 167);
 		panel.add(panel_4);
+		panel_4.setLayout(null);
 	}
 }
