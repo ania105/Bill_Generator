@@ -65,8 +65,9 @@ public class Bill_G extends JFrame {
 		
 		// total and tax
 		
-		double tx = Double.valueOf(Tax.getText());
-		double all_total = total * tx;
+	//	double tx = Double.valueOf(Tax.getText());
+		double all_tot = total * 0.05;
+		double all_total = total + all_tot;
 		Total.setText(String.valueOf(all_total));
 	}
 	
@@ -94,7 +95,7 @@ public class Bill_G extends JFrame {
 		
 		textPane.setText(textPane.getText()+"                  ---------------------------------------------------------------------------\n");
 		textPane.setText(textPane.getText()+"Subtotal :\t\t" + bill_tot.getText() + "\n");
-		textPane.setText(textPane.getText()+"Tax :\t\t" + Tax.getText() + "\n");
+		textPane.setText(textPane.getText()+"Tax :\t\t" + "5.0%"+ "\n");
 		textPane.setText(textPane.getText()+"Total :\t\t" + Total.getText() + "\n");
 		textPane.setText(textPane.getText()+"                  ===========================================================================\n");
 	}
@@ -770,7 +771,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_4_2.setBounds(245, 403, 70, 22);
 		panel_2.add(lblNewLabel_4_2);
 		
-		Tax = new JLabel("1.05");
+		Tax = new JLabel("5%");
 		Tax.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		Tax.setBorder(new LineBorder(new Color(0, 0, 0)));
 		Tax.setBackground(Color.BLACK);
