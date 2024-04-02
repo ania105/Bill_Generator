@@ -73,12 +73,12 @@ public class Bill_G extends JFrame {
 	
 	
 	public void drwbill() {
-		textPane.setText("                          \tThe Tech In Box Cafe\n");
-		textPane.setText(textPane.getText()+("                               \t568/Green street,\n"));
-		textPane.setText(textPane.getText()+("                               \t568/Green street,\n"));
-		textPane.setText(textPane.getText()+"                  ---------------------------------------------------------------------------\n");
-		textPane.setText(textPane.getText()+("            Item  \t\t  Qty  \t\t  Price \n"));
-		textPane.setText(textPane.getText()+"                  ---------------------------------------------------------------------------\n");
+		textPane.setText("                       \t  The Seraphina\n");
+		textPane.setText(textPane.getText()+("                             \t568/Green street,\n"));
+		textPane.setText(textPane.getText()+("                                 \t   Siolim\n"));
+		textPane.setText(textPane.getText()+"  ----------------------------------------------------------------------------------------------------\n");
+		textPane.setText(textPane.getText()+("         Item  \t\t  Qty  \t\t  Price \n"));
+		textPane.setText(textPane.getText()+"  ----------------------------------------------------------------------------------------------------\n");
 		
 		// add table
 		
@@ -88,16 +88,16 @@ public class Bill_G extends JFrame {
 			String qt = dt.getValueAt(i, 1).toString();		// Qty
 			String prc = dt.getValueAt(i, 2).toString();	// Price
 			
-			textPane.setText(textPane.getText() +"  " +itm +"\t" + qt + "\t\t" + prc + "\n");
-			
+			textPane.setText(textPane.getText() +"    " +itm +"\t  " + qt + "\t\t" + prc + "\n");
+				
 		}
 		// end of table
 		
-		textPane.setText(textPane.getText()+"                  ---------------------------------------------------------------------------\n");
-		textPane.setText(textPane.getText()+"Subtotal :\t\t" + bill_tot.getText() + "\n");
-		textPane.setText(textPane.getText()+"Tax :\t\t" + "5.0%"+ "\n");
-		textPane.setText(textPane.getText()+"Total :\t\t" + Total.getText() + "\n");
-		textPane.setText(textPane.getText()+"                  ===========================================================================\n");
+		textPane.setText(textPane.getText()+"  -----------------------------------------------------------------------------------------------------\n");
+		textPane.setText(textPane.getText()+"   Subtotal :\t\t" + bill_tot.getText() + "\n");
+		textPane.setText(textPane.getText()+"   Tax :\t\t" + "5.0%"+ "\n");
+		textPane.setText(textPane.getText()+"   Total :\t\t" + Total.getText() + "\n");
+		textPane.setText(textPane.getText()+"  ====================================================================================\n");
 	}
 	
 	/**
@@ -175,7 +175,7 @@ public class Bill_G extends JFrame {
 		
 		JButton btnNewButton = new JButton("MOCKTAIL");
 		btnNewButton.setForeground(new Color(0, 0, 0));
-		btnNewButton.setBackground(new Color(255, 255, 255));
+		btnNewButton.setBackground(UIManager.getColor("Button.background"));
 		btnNewButton.setFont(new Font("Arial", Font.PLAIN, 18));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -252,7 +252,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox.getSelectedItem();
-				addTable("Blue Moon    ", Qty, 210.00);
+				addTable("Blue Moon     ", Qty, 210.00);
 				
 			}});
 		
@@ -269,11 +269,11 @@ public class Bill_G extends JFrame {
 		comboBox_1.setBounds(289, 241, 133, 25);
 		panel_6.add(comboBox_1);
 		
-		JButton lblNewLabel_3_1 = new JButton("Chilli Guava   ");
+		JButton lblNewLabel_3_1 = new JButton("Chilli Guava");
 		lblNewLabel_3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox_1.getSelectedItem();
-				addTable("Chilli Guava", Qty, 210.00);
+				addTable("Chilli Guava     ", Qty, 210.00);
 			}
 		});
 		lblNewLabel_3_1.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
@@ -290,7 +290,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_3_1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox_1_1.getSelectedItem();
-				addTable("Mint Mojito", Qty, 235.00);
+				addTable("Mint Mojito     ", Qty, 235.00);
 			}
 		});
 		lblNewLabel_3_1_1.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
@@ -307,7 +307,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_3_1_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox_1_2.getSelectedItem();
-				addTable("Cranberry Mix", Qty, 275.00);
+				addTable("Cranberry Mix ", Qty, 275.00);
 			}
 		});
 		lblNewLabel_3_1_2.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
@@ -485,7 +485,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_3_2_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox_2_7.getSelectedItem();
-				addTable("Kaju Masala", Qty, 395.00);
+				addTable("Kaju Masala    ", Qty, 395.00);
 			
 			}
 		});
@@ -504,7 +504,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_3_2_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox_2_8.getSelectedItem();
-				addTable("Veg. Korma", Qty, 395.00);
+				addTable("Veg. Korma    ", Qty, 395.00);
 			}
 		});
 		lblNewLabel_3_2_3.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
@@ -540,7 +540,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_3_2_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox_2_10.getSelectedItem();
-				addTable("Butter Roti", Qty, 75.00);
+				addTable("Butter Roti    ", Qty, 75.00);
 			}
 		});
 		lblNewLabel_3_2_5.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
@@ -607,7 +607,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_3_2_1_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox_2_7_3.getSelectedItem();
-				addTable("Ice cream", Qty, 90.00);
+				addTable("Ice cream        ", Qty, 90.00);
 			}
 		});
 		lblNewLabel_3_2_1_3.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
@@ -676,7 +676,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_3_2_1_1_1_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox_2_7_1_3.getSelectedItem();
-				addTable("Rose Lassi", Qty, 130.00);
+				addTable("Rose Lassi    ", Qty, 130.00);
 				
 			}
 		});
@@ -713,7 +713,7 @@ public class Bill_G extends JFrame {
 		lblNewLabel_3_2_1_1_1_3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String Qty = (String) comboBox_2_7_1_4_1.getSelectedItem();
-				addTable("Buttermilk", Qty, 90.00);
+				addTable("Buttermilk    ", Qty, 90.00);
 			}
 		});
 		lblNewLabel_3_2_1_1_1_3_1.setFont(new Font("Berlin Sans FB", Font.PLAIN, 22));
