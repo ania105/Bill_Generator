@@ -320,6 +320,7 @@ public class Bill_G extends JFrame {
 		
 		
 		
+		
 		JPanel panel_10 = new JPanel();
 		tabbedPane.addTab("Starters", null, panel_10, null);
 		panel_10.setLayout(null);
